@@ -1,0 +1,4 @@
+UPDATE Department
+SET TotalEmp = (SELECT COUNT(Department_ID) FROM Employee WHERE Employee.Department_ID = Department.ID);
+
+SELECT *, Employee.NAME as EMPLOYEE_NAME, Department.NAME as DEPAR_NAME FROM Employee JOIN Department ON Employee.Department_ID = Depatment.ID
